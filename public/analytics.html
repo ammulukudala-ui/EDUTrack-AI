@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Analytics — EDUTrack AI</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/css/style.css"></head>
+<body data-page="analytics">
+<div id="shell"><main id="content">
+<div class="card mb-3"><div class="card-body py-2"><div class="row g-2 align-items-end">
+<div class="col-6 col-md-2"><label class="form-label small mb-0">From</label><input type="date" id="fFrom" class="form-control form-control-sm"></div>
+<div class="col-6 col-md-2"><label class="form-label small mb-0">To</label><input type="date" id="fTo" class="form-control form-control-sm"></div>
+<div class="col-6 col-md-2" id="stuWrap" style="display:none"><label class="form-label small mb-0">Student</label><select id="fStudent" class="form-select form-select-sm"><option value="">All authorised</option></select></div>
+<div class="col-6 col-md-2"><label class="form-label small mb-0">Subject</label><select id="fSubject" class="form-select form-select-sm"><option value="">All</option></select></div>
+<div class="col-6 col-md-2"><label class="form-label small mb-0">Semester</label><select id="fSemester" class="form-select form-select-sm"><option value="">All</option></select></div>
+<div class="col-6 col-md-2"><label class="form-label small mb-0">Assessment type</label><select id="fType" class="form-select form-select-sm"><option value="">All</option><option>Internal Examination</option><option>Assignment</option><option>Quiz</option><option>Practical</option><option>Semester Examination</option></select></div>
+<div class="col-auto"><button class="btn btn-sm btn-primary" id="applyBtn">Apply</button> <button class="btn btn-sm btn-light" id="resetBtn">Reset</button></div></div></div></div>
+<div class="row g-3 mb-3" id="cards"></div>
+<div class="row g-3 mb-3"><div class="col-lg-6"><div class="card h-100"><div class="card-header">A. Subject-wise performance (avg %)</div><div class="card-body"><div class="chart-box"><canvas id="perfChart"></canvas></div></div></div></div><div class="col-lg-6"><div class="card h-100"><div class="card-header">B. Performance trend (%)</div><div class="card-body"><div class="chart-box"><canvas id="trendChart"></canvas></div></div></div></div><div class="col-lg-6"><div class="card h-100"><div class="card-header">C. Attendance by subject (%)</div><div class="card-body"><div class="chart-box"><canvas id="attChart"></canvas></div></div></div></div><div class="col-lg-6"><div class="card h-100"><div class="card-header">D. Study productivity (minutes per day)</div><div class="card-body"><div class="chart-box"><canvas id="studyChart"></canvas></div></div></div></div><div class="col-lg-4"><div class="card h-100"><div class="card-header">E. Task completion</div><div class="card-body"><div class="chart-box"><canvas id="taskChart"></canvas></div></div></div></div>
+<div class="col-lg-8"><div class="card h-100"><div class="card-header">Reports (CSV, respects the filters above)</div><div class="card-body d-flex flex-wrap gap-2" id="reportBtns"></div></div></div></div>
+</main></div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/analytics.js"></script>
+</body></html>
