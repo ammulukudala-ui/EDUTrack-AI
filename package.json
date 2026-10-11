@@ -1,8 +1,7 @@
-
 {
   "name": "edutrack-ai",
   "version": "1.0.0",
-  "description": "EDUTrack AI - Student Productivity and Academic Risk Analyzer",
+  "description": "EDUTrack AI - Student Productivity & Academic Risk Analyzer (Node.js, Express, MongoDB, jQuery)",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -28,7 +27,5 @@
     "nodemon": "^3.1.4",
     "supertest": "^7.0.0"
   },
-  "engines": {
-    "node": ">=18"
-  }
+  "engines": { "node": ">=18" }
 }
